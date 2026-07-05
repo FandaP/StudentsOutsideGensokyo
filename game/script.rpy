@@ -9,7 +9,7 @@ define FandaP = Character(name="阿P",color="#00f",image="FandaP")
 define CirNo = Character(name="琪露锘",color="#68f")
 define Shinden = Character(name="Shinden")
 define chuge = Character(name="chuge",color="#fff")
-define PGods = Character(name="古神",color="#383")
+define zectbumokhfs = Character(name="zectbumokhfs",color="#383")
 define Mom = Character(name="妈妈",image="myMom")
 default THCharas = [
     "博丽灵梦", "雾雨魔理沙", "神玉", "魅魔", "菊理", "矜羯罗", 
@@ -48,7 +48,7 @@ default THCharas = [
     "绵月丰姬", "绵月依姬", "Reisen", "嫦娥", "稗田阿求", "茨木华扇", 
     "本居小铃", "宫出口瑞灵", "奥野田美宵","宇佐见莲子","玛艾露贝莉·赫恩","梅丽"
 ]
-default GameCharas = ["FandaP","阿P","琪露锘","邪神","古神","鱼干","chuge","憧憬成为囚鸟少女","Shinden","人形废物","调查兵团"]
+default GameCharas = ["FandaP","阿P","琪露锘","邪神","古神","鱼干","chuge","憧憬成为囚鸟少女","Shinden","人形废物","调查兵团","zectbumokhfs"]
 
 label start:
     $ myName = "？？？"
@@ -115,7 +115,7 @@ label main0b:
     FandaP "你穿成这个样子，很明显是有ACGN展吧……哦，不好意思，我平时不喜欢说“漫展”这个词。"
     I "但是……我平时就穿的这个衣服啊。"
     FandaP "啊？！"
-    with Pause(0.5)
+    pause 0.5
     extend "\n你平时怎么可能穿这个？魔怔了？"
     "低头看看妈妈亲手给我做的衣服，我的记忆突然涌上来。"
     "我的思绪飘到了很久以前……"
@@ -168,9 +168,10 @@ label main2:
     I "？？？手机？"
     I "手机是啥？"
     with hpunch 
-    with Pause(2)
+    pause 2
     show FandaP awkward with dissolve
-    FandaP "……" with Pause(1)
+    FandaP "……" 
+    pause 1
     extend "\n你真是幻想乡来的？"
     I "对啊，怎么了？"
     FandaP "……你叫什么，我带你熟悉一下外面世界"
@@ -226,8 +227,8 @@ label main4:
     "我只是去神社四周逛逛，没想到却遇到了两个行踪诡异的人。"
     show CirNo black at left with dissolve 
     CirNo "我们现在，貌似是出不去了啊……"
-    show PGods black at right with dissolve
-    PGods "没事的，我还有两枚核弹，把大结界炸了就好了。"
+    show zectbumokhfs black at right with dissolve
+    zectbumokhfs "没事的，我还有两枚核弹，把大结界炸了就好了。"
     CirNo "我去这么聪明<('o')>"
     "此时，我想到妈妈和我说过的，"
     scene bg gensokyo_myhome with dissolve
@@ -236,21 +237,21 @@ label main4:
     scene bg gensokyo_shrine with dissolve
     "为此，我要上去阻止他们。我不想要这么美好的幻想乡被破坏。"
     show CirNo at left
-    show PGods at right
+    show zectbumokhfs at right
     with dissolve
     
     I "你们，要干什么！" 
     with hpunch
     CirNo "呃，你谁啊？"
-    PGods "一个杂鱼，和大结界一起炸了就好了。"
+    zectbumokhfs "一个杂鱼，和大结界一起炸了就好了。"
     with hpunch
     
     I "（察觉到不对）等等，你说啥？"
     CirNo "反正，炸死了也没人管。"
-    PGods "（丢出核弹）"
+    zectbumokhfs "（丢出核弹）"
     I "你们干什么，不许……"
     hide CirNo
-    hide PGods 
+    hide zectbumokhfs
     with dissolve
     
     scene bg gensokyo_shrine with vpunch
@@ -260,7 +261,7 @@ label main4:
     
     I "。……？"
     CirNo "怎么没炸开啊，古神你行不行啊？"
-    PGods "卧槽这大结界怎么这么坚固，算了我去找点反物质去。"
+    zectbumokhfs "卧槽这大结界怎么这么坚固，算了我去找点反物质去。"
     I "（意识逐渐模糊）你们。。怎么能炸大结界。。。"
     extend "\n饿啊！（彻底失去意识）"
     
@@ -280,41 +281,31 @@ label main5:
     I "你在里面干什么啊，这五楼怎么会有水声啊？"
     FandaP "欸，五楼有水声……\n你现在先坐回去啦，我等会再告诉你为什么有水声，行吧？"
     I "你还没回答呢，你在里面干什么呢？"
-    "然而，回答我的却是持久的沉默"
+    "然而，回答我的却是持久的沉默。"
     FandaP "（关掉水龙头）"
     "随后，连水声都消失了。"  
     "面对阿P如此沉默的回应，你打算？"
     menu :
         "还是听阿P的话，回去坐着吧。":
-            I "你怎么不说话？"
-            I "算了，你让我坐着就坐着吧。"
-            "说完，我回到了卧室。"
-            scene black
-            "后面的剧情没有了哦"
-            return
+            jump branch2
         "阿P这是在洗澡？哇多么好的机会啊":
-            jump BE1
+            jump branch1
 
 
-label BE1:
+label branch1:
     "你打开了浴室门。"
     scene bg PHome bathri with dissolve  
     show FandaP normal with dissolve     
     "然而，阿P却以一种奇怪的眼神打量着你。"
     I "呃，阿P你是在洗澡吗？不好意思我先出……"
-    "然而，我却被拦下了。"
-    
-    FandaP "你啊，现在貌似是被控制了呢,[myName]。"
+    "这时候，阿P却开口说话了。"
+    FandaP "哇啊，真是变态呢。"
     pause 0.5
-    extend "或者说，你根本不是[myName]，你只不过是坐在屏幕前面罢了。"
-    FandaP "算了，就假设你是幻想乡来的，你妈没告诉你不要看别人洗澡吗？"
-    I "可是我们在人里都泡澡堂啊……"
-    FandaP awkward "……算了，不重要了。"
-    FandaP "下面这话是对坐在屏幕前的你说的："
-    show FandaP smiled angrily with None
-    show bg be1 with hpunch
-    extend "游戏剧情才进行到哪啊你他妈就像想看隐藏CG？你妈的，没玩过Galgame？还是说你个死猪一心只想着看福利，啊？"
-    FandaP "你带着你的[myName]一起死吧。（无慈悲）"
+    extend "你其实不是[myName]，你只不过是坐在屏幕前面玩游戏的人吧。"
+    show FandaP smiled angrily with dissolve
+    FandaP "诶呀呀，游戏剧情才进行到哪啊，你就想看隐藏CG？一心只想着看福利，真是恶心啊。"
+    FandaP "这话，可是对坐在屏幕前的你说的。"
+    FandaP "你，就带着你的[myName]一起死吧。（无慈悲）"
     "说着，一把刀插进了我的心脏。"
     I "不是姐，你去干那个控制我的人啊，关我什么事？"
     show FandaP awkward inblood with dissolve 
@@ -323,11 +314,11 @@ label BE1:
     show FandaP smiled inblood with dissolve
     FandaP "一路走好，反正还有后面的周目。"
     scene black with dissolve
-    pause 1.0
+    pause 1.0 
     show FandaP smiled inblood
     # if peekTimes == 0:
     FandaP "你还希望后面有剧情？"
-    FandaP "我告诉你，我是这个游戏的开发者，你这一周目看我洗澡，那我可不会让你下一周目好过了。"
+    FandaP "只可惜，我是这个游戏的开发者，你这一周目看我洗澡，你下一周目可不会好过了。"
     # elif peekTimes == 1:
     #     FandaP "你又来了呢，真是色心不死啊。"
     #     FandaP "你居然还敢选偷窥选项，真是胆大啊。"
@@ -340,7 +331,7 @@ label BE1:
     #     "FandaP并没有再出现。"
     # $ peekTimes = peekTimes + 1 
     return
-
     
+label branch2:
+    # 这里是不选择偷看的剧情，我先想想再写。
 
-    
