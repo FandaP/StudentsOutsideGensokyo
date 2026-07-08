@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-# @title Students Outside Gensokyo
+# @title StudentsOutsideGensokyo
 # @author FandaP
 # 虽然FandaP是代码的编写者与剧情的构造者，但这里的故事是所有初中车万众学习交流群的同学们一起创造的！
 
@@ -48,7 +48,7 @@ default THCharas = [
     "绵月丰姬", "绵月依姬", "Reisen", "嫦娥", "稗田阿求", "茨木华扇", 
     "本居小铃", "宫出口瑞灵", "奥野田美宵","宇佐见莲子","玛艾露贝莉·赫恩","梅丽"
 ]
-default GameCharas = ["FandaP","阿P","琪露锘","邪神","古神","鱼干","chuge","憧憬成为囚鸟少女","Shinden","人形废物","调查兵团","zectbumokhfs"]
+default GameCharas = ["FandaP","阿P","琪露锘","古神","鱼干","chuge","憧憬成为囚鸟少女","Shinden","人形废物","调查兵团","zectbumokhfs"]
 
 label start:
     $ myName = "？？？"
@@ -74,7 +74,7 @@ label main0:
     "2026年5月10日，在一处让我非常陌生的地方。"
     I "好痛……"
     I "我这是在哪……"
-    scene bg street night with fade 
+    # bg 夜晚的街头
     $ myName = "我"
     "夜晚的街头，路灯正在闪烁着。"
     "这里除了我，貌似一个人也没有。"
@@ -82,7 +82,7 @@ label main0:
     "一阵强劲的音乐传来。"
     I "好熟悉……虽然没听过但总觉得好熟悉……"
     "音乐声越来越大。"
-    show FandaP black with easeinright
+    # 黑影阿P从屏幕右边出现并移到中间
     "一个年龄和我相仿的男孩向我走来，他的手中紧握着一个方形的盒子。"
     menu:
         I "这里好像也没别人了，只能求助于他了……"
@@ -93,7 +93,7 @@ label main0:
 
 label main0a:
     I "……你好？"
-    show FandaP with dissolve
+    # 阿P身着校服，身影亮了起来
     FandaP "嗯嗯，什么事情？"
     I "就是说，你放的那首歌，是……"
     FandaP "是“东方Project”的曲子啦。"
@@ -107,7 +107,7 @@ label main0a:
     jump main1
 
 label main0b:
-    show FandaP doubtful with dissolve
+    # 身着校服的阿P疑惑地看着我
     I "……？"
     "那个男孩打量了我一眼，随后开口说道："
     FandaP "今天……是有什么展会吗？"
@@ -122,12 +122,11 @@ label main0b:
     jump main1
 
 label main1:
-    scene bg gensokyo humanvillage day with Fade(0.5,0.5,0.5,color="#fff")
-    hide FandaP
+    # scene 幻想乡人类村落
     "2012年1月，我出生于人类村落里。"
     "从小，我的父母就和我讲述幻想乡的故事。"
-    scene bg gensokyo myhome
-    show mom happy with dissolve
+    # scene 我家
+    # 我妈开心地笑
     Mom "数百年前，妖怪们为了保留自己的栖息地，建立了结界。"
     Mom "结节将幻想乡与外界隔离开来，这里成为了妖怪最后的乐园。"
     I "那……人类呢？人类在幻想乡里安全吗？"
@@ -137,23 +136,24 @@ label main1:
     Mom "是啊，她是幻想乡的守护者，也是解决异变的关键。"
     I "那这样，人类的生存就有保障了。"
     I "……对吧？"
-    show mom serious with Dissolve(2)
+    # 我妈严肃
     Mom "你应该不会去招惹外面的妖怪吧？"
     I "肯定不会的！我保证！"
-    show mom happy with Dissolve(2)
+    # 我妈又开心了
     Mom "嗯，那就好~"
     scene black with dissolve
     "这就是我的故事。"
     jump main2
 
 label main2:
-    scene bg street night with Fade(0.5,0.5,0.5,color="#fff")
+    # scene 夜晚的街头
     "记忆的潮水退去，我回到了现实的街头。"
-    show FandaP with dissolve
+    # 阿P的身影再次出现在屏幕中央
     FandaP "——喂，说话啊！"
     I "哦哦，那个……"
     I "我是从幻想乡来的，我叫……"
-    FandaP shocked "你说什么？！" 
+    # 阿P震惊
+    FandaP "你说什么？！" 
     with hpunch
     extend "你是从幻想乡来的？！"
     I "呃……怎么了？"
@@ -163,13 +163,13 @@ label main2:
     FandaP "你……真的不知道东方Project？"
     I "你别管这个了……这是什么地方，怎么这么多这么怪异的建筑？"
     FandaP "这不就普通的高楼吗……小康社会都全面实现了，怎么还有人连高楼都没见过……"
-    show FandaP doubtful
+    # 阿P疑惑
     FandaP "不对啊，你都知道幻想乡了，怎么还没见过高楼大厦，刷手机也没见到过吗？"
     I "？？？手机？"
     I "手机是啥？"
     with hpunch 
     pause 2
-    show FandaP awkward with dissolve
+    # 阿P流汗
     FandaP "……" 
     pause 1
     extend "\n你真是幻想乡来的？"
@@ -178,7 +178,7 @@ label main2:
     I "哦对对，我刚刚要说名字来着，我的名字叫……"
 
 label main3:
-    show FandaP happy
+    # 阿P闭眼笑
     $ myName = renpy.input("我的名字叫").strip()
     if myName in THCharas:
         "我" "我的名字叫[myName]"
@@ -190,7 +190,7 @@ label main3:
         jump main3
     else:
         if not myName:
-            show FandaP shocked with hpunch
+            # 阿P震惊
             FandaP "你的名字是棍母？！"
             jump main3
         FandaP "[myName]，真是个奇怪的名字，不过细想也是个好名字。"
@@ -212,34 +212,31 @@ label main3:
             "诚然，这里热的不行。\n想了想，我还是跟着阿P走了"
             FandaP "你快走吧，已经晚上十一点半了"
     "就这样，我们前往了阿P的家。"
-    scene bg PHome livingr with fade
-    show FandaP with dissolve
+    # scene 阿P家起居室
+    # 阿P出现
     FandaP "你等会，我马上就回来了，你在这坐会儿先啦。"
-    hide FandaP with dissolve 
+    # 阿P消失
     I "没想到果然还是来了啊……"
     I "话说，我来之前是怎么回事来着？"
     "记忆，又开始涌来。"
     jump main4
 
 label main4:
-    scene bg gensokyo_shrine with Fade(0.5, 0.5, 0.5, color="#fff")
+    # scene 博丽大结界
     "5月10日，博丽神社。"
     "我只是去神社四周逛逛，没想到却遇到了两个行踪诡异的人。"
-    show CirNo black at left with dissolve 
+    # 琪露锘 出现于画面左部
     CirNo "我们现在，貌似是出不去了啊……"
-    show zectbumokhfs black at right with dissolve
+    # 古神 出现于画面右部
     zectbumokhfs "没事的，我还有两枚核弹，把大结界炸了就好了。"
     CirNo "我去这么聪明<('o')>"
     "此时，我想到妈妈和我说过的，"
-    scene bg gensokyo_myhome with dissolve
-    show Mom with dissolve
+    # scene 我家
     Mom "博丽大结界是幻想乡最重要的东西。如果结界没了，幻想乡将不复存在。"
-    scene bg gensokyo_shrine with dissolve
+    # scene 博丽大结界
     "为此，我要上去阻止他们。我不想要这么美好的幻想乡被破坏。"
-    show CirNo at left
-    show zectbumokhfs at right
-    with dissolve
-    
+    # 琪露锘、古神 出现于画面左部、右部
+
     I "你们，要干什么！" 
     with hpunch
     CirNo "呃，你谁啊？"
@@ -250,17 +247,15 @@ label main4:
     CirNo "反正，炸死了也没人管。"
     zectbumokhfs "（丢出核弹）"
     I "你们干什么，不许……"
-    hide CirNo
-    hide zectbumokhfs
-    with dissolve
+    # 琪露诺 古神分别从画面左右溜了出去
     
-    scene bg gensokyo_shrine with vpunch
+    # 核弹爆炸
     scene white with dissolve
     pause 4
     scene black with dissolve
     
     I "。……？"
-    CirNo "怎么没炸开啊，古神你行不行啊？"
+    CirNo "怎么没炸开啊，古神你行不行啊？" # Another Views
     zectbumokhfs "卧槽这大结界怎么这么坚固，算了我去找点反物质去。"
     I "（意识逐渐模糊）你们。。怎么能炸大结界。。。"
     extend "\n饿啊！（彻底失去意识）"
@@ -270,11 +265,11 @@ label main4:
 
 
 label main5:
-    scene bg PHome livingr with dissolve
+    # scene 阿P家起居室
     "思索间，浴室传来了哗啦啦的流水声。"
     I "这不是五楼吗，哪来的水声？"
     "当时的我貌似并不知道外乡的现代科技已经可以用水泵把水送到几十层的高度了，更别说五楼。\n不知其所以然的我站起来走向了水声来源的方向。"
-    scene bg PHome bathro with dissolve
+    # scene 阿P家浴室门口
     "浴室里" "（水声）"
     I "阿P，你在里面吗？"
     FandaP "啊拉，干什么啊？\n你先回去坐着呗，我等会就来了。"
@@ -294,28 +289,29 @@ label main5:
 
 label branch1:
     "你打开了浴室门。"
-    scene bg PHome bathri with dissolve  
-    show FandaP normal with dissolve     
+    # scene 浴室里面
+    # 阿P身着浴衣，伴之以轻蔑的目光
     "然而，阿P却以一种奇怪的眼神打量着你。"
     I "呃，阿P你是在洗澡吗？不好意思我先出……"
     "这时候，阿P却开口说话了。"
     FandaP "哇啊，真是变态呢。"
     pause 0.5
     extend "你其实不是[myName]，你只不过是坐在屏幕前面玩游戏的人吧。"
-    show FandaP smiled angrily with dissolve
+    # 阿P 生气地微笑
     FandaP "诶呀呀，游戏剧情才进行到哪啊，你就想看隐藏CG？一心只想着看福利，真是恶心啊。"
     FandaP "这话，可是对坐在屏幕前的你说的。"
     FandaP "你，就带着你的[myName]一起死吧。（无慈悲）"
+    # 阿P 浴衣带血 微笑 生气
     "说着，一把刀插进了我的心脏。"
     I "不是姐，你去干那个控制我的人啊，关我什么事？"
-    show FandaP awkward inblood with dissolve 
+    # 阿P 浴衣带血 微笑 流汗
     FandaP "……我会给TA惩罚的。"
     "就这样，我死了。"
-    show FandaP smiled inblood with dissolve
+    # 阿P 浴衣带血 笑
     FandaP "一路走好，反正还有后面的周目。"
     scene black with dissolve
     pause 1.0 
-    show FandaP smiled inblood
+    # 阿P 浴衣带血 微笑
     # if peekTimes == 0:
     FandaP "你还希望后面有剧情？"
     FandaP "只可惜，我是这个游戏的开发者，你这一周目看我洗澡，你下一周目可不会好过了。"
