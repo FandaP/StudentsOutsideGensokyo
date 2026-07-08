@@ -30,3 +30,9 @@
 
 # Dialogue which have not been added into the code.
 /Shinden.txt
+
+# Git-bash runner file.
+/rungit.bat
+
+# .gitignore
+.gitignore
