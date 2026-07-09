@@ -33,6 +33,3 @@
 
 # Git-bash runner file.
 /rungit.bat
-
-# .gitignore
-.gitignore
