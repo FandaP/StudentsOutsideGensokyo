@@ -366,5 +366,23 @@ label branch1:
     return
     
 label branch2:
-    # 这里是不选择偷看的剧情，我先想想再写。
-
+    I "诶，不理我吗？"
+    I "你这样我可要回去了。"
+    "就在我准备回去的时候，阿P突然说话了。"
+    FandaP "你等会儿，我马上出来了。"
+    show FandaP bathrobe smile normal with dissolve
+    "阿P裹着浴袍，从中走了出来。"
+    I "所以，你到底在干什么啊。"
+    FandaP "在洗澡啦，怎么？"
+    I "原来如此……"
+    FandaP "本来想着，像你这个年龄的人，多少会闯进去的。"
+    FandaP "如果你是一个偷窥狂的话，那你可不能活着离开了。"
+    # if peekTimes:
+    #     scene black
+    #     show FandaP bathrobe smile holdknife with dissolve
+    #     FandaP "还是说你本来就是呢？"
+    scene bg outside phome livingr with dissolve
+    "听到这里，我毛骨悚然。我突然后悔来到这里了。"
+    pause 0.5
+    extend "\n但是一旁的阿P看见我的样子，不禁笑了起来。"
+    FandaP "你呀，果然还是Too young！"
