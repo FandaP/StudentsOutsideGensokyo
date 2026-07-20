@@ -108,7 +108,7 @@ label main1a:
     FandaP "东方Project可是一个游戏漫画小说动画集合在一起的世界观，大概就是一群人类和妖怪在幻想乡瞎闹的故事。"
     "听到幻想乡这个地名，我的记忆突然涌上来。"
     "我的思绪飘到了很久以前……"
-    jump main1
+    jump main2
 
 label main1b:
     # 身着校服的阿P疑惑地看着我
@@ -312,9 +312,9 @@ label main6:
     "面对阿P如此沉默的回应，你打算？"
     menu :
         "还是听阿P的话，回去坐着吧。":
-            jump main6b
+            jump main7b
         "阿P这是在洗澡？哇多么好的机会啊":
-            jump main6a
+            jump main7a
 
 
 label main7a:
