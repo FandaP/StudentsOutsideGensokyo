@@ -322,48 +322,38 @@ label main7a:
     # scene 浴室里面
     scene bg outside phome bathri with dissolve
     # 阿P身着浴衣，伴之以轻蔑的目光
-    show FandaP bathrobe contemptuous holdknife sweat
+    show FandaP bathrobe contemptuous normal sweat
     "然而，阿P却以一种奇怪的眼神打量着你。"
     I "呃，阿P你是在洗澡吗？不好意思我先出……"
     "这时候，阿P却开口说话了。"
-    FandaP "哇啊，真是变态呢。"
+    FandaP "哇啊啊，真是变态呢。"
     pause 0.5
-    extend "你其实不是[myName]，你只不过是坐在屏幕前面玩游戏的人吧。"
-    # 阿P 生气地微笑
-    show FandaP bathrobe smile holdknife angry
-    FandaP "诶呀呀，游戏剧情才进行到哪啊，你就想看隐藏CG？一心只想着看福利，真是恶心啊。"
-    FandaP "这话，可是对坐在屏幕前的你说的。"
-    FandaP "你，就带着你的[myName]一起死吧。（无慈悲）"
+    show FandaP bathrobe smile normal angry
+    FandaP "你个死变态！这才哪到哪啊，你就想看隐藏CG？"
+    FandaP "我说，[myName]你是不是有点太恶心了点？"
     # 阿P 浴衣带血 微笑 生气
-    show FandaP bathrobe laugh holdknife none inblood with vpunch
+    show FandaP bathrobe laugh holdknife none with vpunch
     "说着，一把刀插进了我的心脏。"
     I "不是姐，你去干那个控制我的人啊，关我什么事？"
     # 阿P 浴衣带血 微笑 流汗
     show FandaP bathrobe smile holdknife sweat
     FandaP "……我会给TA惩罚的。"
-    "就这样，我死了。"
-    # 阿P 浴衣带血 笑
-    show FandaP bathrobe laugh goodbye none inblood
-    FandaP "一路走好，反正还有后面的周目。"
-    scene black with dissolve
-    pause 1.0 
-    # 阿P 浴衣带血 微笑
-    show FandaP bathrobe smile holdknife angry inblood
-    # if peekTimes == 0:
-    FandaP "你还希望后面有剧情？"
-    FandaP "只可惜，我是这个游戏的开发者，你这一周目看我洗澡，你下一周目可不会好过了。"
-    # elif peekTimes == 1:
-    #     FandaP "你又来了呢，真是色心不死啊。"
-    #     FandaP "你居然还敢选偷窥选项，真是胆大啊。"
-    #     FandaP "下一次可不会让你这么容易就新开一周目了，你最好小心点。"
-    # elif peekTimes > 2 and peekTime < 9:
-    #     FandaP "你就没有更重要的事情要做吗？"
-    # elif peekTimes == 10 :
-    #     FandaP "你啊，真是幼稚呢。后面不会再提醒你了。"
-    # else :
-    #     "FandaP并没有再出现。"
-    # $ peekTimes = peekTimes + 1 
-    return
+    "我绝望地闭上了眼睛。"
+    scene black with easeintop
+    "但是，想象中的疼痛与死亡并没有出现。"
+    "反而是阿P的笑声突兀地出现了。"
+    scene bg outside phome bathri with easeinbottom
+    show FandaP bathrobe laugh normal none with dissolve
+    FandaP "噗嗤，哈哈哈哈哈哈哈，你——哈哈哈哈哈哈哈——"
+    I "额，我……"
+    "我低头看了看身上，一道伤口也没有。"
+    "而阿P的手中，是一把塑料制的匕首。"
+    I "搞什么嘛……"
+    show FandaP bathrobe contemptuous holdknife angry with zoomin
+    FandaP "幸亏你没见过这种花洒，不知道我在洗澡，否则这可是一把真正的匕首了。"
+    show FandaP bathrobe laugh normal none with zoomout
+    FandaP "这怎么可能呢，持有管制刀具可是违法的。。。"
+
 
 label main7b:
     I "诶，不理我吗？"
