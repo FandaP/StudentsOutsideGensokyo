@@ -90,11 +90,11 @@ label main0:
     menu:
         I "这里好像也没别人了，只能求助于他了……"
         "……你好？":
-            jump main0a
+            jump main1a
         "……":
-            jump main0b
+            jump main1b
 
-label main0a:
+label main1a:
     I "……你好？"
     # 阿P身着校服，身影亮了起来
     show FandaP uniform happy normal with dissolve
@@ -110,7 +110,7 @@ label main0a:
     "我的思绪飘到了很久以前……"
     jump main1
 
-label main0b:
+label main1b:
     # 身着校服的阿P疑惑地看着我
     show FandaP uniform doubtful normal with dissolve
     I "……？"
@@ -124,9 +124,9 @@ label main0b:
     extend "\n你平时怎么可能穿这个？魔怔了？"
     "低头看看妈妈亲手给我做的衣服，我的记忆突然涌上来。"
     "我的思绪飘到了很久以前……"
-    jump main1
+    jump main2
 
-label main1:
+label main2:
     scene bg gensokyo humanvillage night
     "2012年1月，我出生于人类村落里。"
     "从小，我的父母就和我讲述幻想乡的故事。"
@@ -153,9 +153,9 @@ label main1:
     Mom "嗯，那就好~"
     scene black with dissolve
     "这就是我的故事。"
-    jump main2
+    jump main3
 
-label main2:
+label main3:
     # scene 夜晚的街头
     scene bg outside street night
     "记忆的潮水退去，我回到了现实的街头。"
@@ -192,7 +192,7 @@ label main2:
     FandaP "……你叫什么，我带你熟悉一下外面世界"
     I "哦对对，我刚刚要说名字来着，我的名字叫……"
 
-label main3:
+label main4:
     # 阿P闭眼笑
     show FandaP uniform laugh normal with dissolve
     $ myName = renpy.input("我的名字叫").strip()
@@ -240,9 +240,9 @@ label main3:
     I "没想到果然还是来了啊……"
     I "话说，我来之前是怎么回事来着？"
     "记忆，又开始涌来。"
-    jump main4
+    jump main5
 
-label main4:
+label main5:
     # scene 博丽大结界
     scene bg gensokyo shirine 
     "5月10日，博丽神社。"
@@ -291,10 +291,10 @@ label main4:
     extend "\n饿啊！（彻底失去意识）"
     
     "好像是个不咋光彩的牺牲……"
-    jump main5
+    jump main6
 
 
-label main5:
+label main6:
     scene bg outside phome livingr
     "思索间，浴室传来了哗啦啦的流水声。"
     I "这不是五楼吗，哪来的水声？"
@@ -312,12 +312,12 @@ label main5:
     "面对阿P如此沉默的回应，你打算？"
     menu :
         "还是听阿P的话，回去坐着吧。":
-            jump branch2
+            jump main6b
         "阿P这是在洗澡？哇多么好的机会啊":
-            jump branch1
+            jump main6a
 
 
-label branch1:
+label main7a:
     "你打开了浴室门。"
     # scene 浴室里面
     scene bg outside phome bathri with dissolve
@@ -365,6 +365,6 @@ label branch1:
     # $ peekTimes = peekTimes + 1 
     return
     
-label branch2:
+label main7b:
     # 这里是不选择偷看的剧情，我先想想再写。
 
