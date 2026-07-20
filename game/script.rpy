@@ -364,9 +364,8 @@ label main7a:
     #     "FandaP并没有再出现。"
     # $ peekTimes = peekTimes + 1 
     return
-    
-<<<<<<< HEAD
-label branch2:
+
+label main7b:
     I "诶，不理我吗？"
     I "你这样我可要回去了。"
     "就在我准备回去的时候，阿P突然说话了。"
@@ -387,8 +386,3 @@ label branch2:
     pause 0.5
     extend "\n但是一旁的阿P看见我的样子，不禁笑了起来。"
     FandaP "你呀，果然还是Too young！"
-=======
-label main7b:
-    # 这里是不选择偷看的剧情，我先想想再写。
-
->>>>>>> main
