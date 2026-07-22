@@ -199,17 +199,17 @@ label main4:
     if myName in THCharas:
         "我" "我的名字叫[myName]"
         FandaP "别开玩笑啦，你怎么可能是[myName]，你到底叫什么？"
-        jump main3
+        jump main4
     elif myName in GameCharas:
         "我" "我的名字叫[myName]"
         FandaP "虽然我知道你很想起这个名字，但是这是这个游戏的剧情角色，所以你只换一个名字啦~"
-        jump main3
+        jump main4
     else:
         if not myName:
             # 阿P震惊
             show FandaP uniform shock normal with hpunch
             FandaP "你的名字是棍母？！"
-            jump main3
+            jump main5
         FandaP "[myName]，真是个奇怪的名字，不过细想也是个好名字。"
 
     FandaP "哦对了，我的名字叫FandaP。当然，他们都叫我阿P。\n你就叫我阿P就行了。"
