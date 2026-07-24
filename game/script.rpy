@@ -350,9 +350,10 @@ label main7a:
     "而阿P的手中，是一把塑料制的匕首。"
     I "搞什么嘛……"
     show FandaP bathrobe contemptuous holdknife angry with zoomin
-    FandaP "幸亏你没见过这种花洒，不知道我在洗澡，否则这可是一把真正的匕首了。"
+    FandaP "幸亏你不知道我在洗澡，否则这可是一把真正的匕首了。"
     show FandaP bathrobe laugh normal none with zoomout
     FandaP "这怎么可能呢，持有管制刀具可是违法的。。。"
+    "阿P走出了浴室。"
 
 
 label main7b:
@@ -371,8 +372,90 @@ label main7b:
     #     scene black
     #     show FandaP bathrobe smile holdknife with dissolve
     #     FandaP "还是说你本来就是呢？"
-    scene bg outside phome livingr with dissolve
+    scene bg outside phome livingr 
+    show FandaP bathrobe smile normal with dissolve
+    with dissolve
     "听到这里，我毛骨悚然。我突然后悔来到这里了。"
     pause 0.5
     extend "\n但是一旁的阿P看见我的样子，不禁笑了起来。"
     FandaP "你呀，果然还是Too young！"
+
+label main8:
+    "然后，阿P把我带到书桌前。"
+    scene bg outside phome desk supportpaper
+    show FandaP uniform smile normal
+    with dissolve
+    FandaP "你是幻想乡来的。"
+    I "对，有什么问题吗？"
+    FandaP "那我可要给你好好解释一下了。"
+    FandaP """在这个世界，有一个神人，名字叫太田顺也。
+
+    他创造了一个世界观，名为“东方”。
+
+    在这个世界观里，妖怪们为了维护自身的稳定，建立了幻想乡。"""
+    I "我知道啊，幻想乡的故事，我从小听到大的。"
+    FandaP "这样啊……"
+    show FandaP uniform thought normal lookinme with dissolve 
+    "阿P手托着腮，一双眼睛盯着我。"
+    FandaP "事情开始变的有趣起来了呢……"
+    I "这个幻想乡对我而言是真实的，对你而言却是虚构的？"
+    FandaP "是这样的呢……"
+    show FandaP uniform thought normal eyesclose with dissolve
+    "我和阿P大眼瞪着小眼，空气一时间凝固了下来。"
+    I "所以？"
+    FandaP "……"
+    show FandaP uniform thought normal lookinme with dissolve
+    "阿P就这样继续盯着我。"
+    pause 0.5
+    extend "过了一会，阿P重新开口。"
+    FandaP "我带你去找两个人。"
+    I "休息一下吧，现在是晚上了嘛。"
+    FandaP "额，那，就明天吧……"
+    I "我们这是要去找谁啊？"
+    FandaP "去找……两个犯了事的家伙。"
+
+
+label main9:
+    scene bg outside 
+    show FandaP uniform smile normal
+    with Fade(0.5,3,0.5)
+    I "咳咳……"
+    "风刮在我的脸上，漫天的灰尘涌来。"
+    pause 0.5
+    extend "\n我感到肺一阵瘙痒。"
+    "我不禁把眼睛眯了起来。"
+    I "呃……"
+    "我指着这一片钢筋，抬起头望向阿P："
+    I "你确定TA住这?"
+    FandaP "欸……？"
+    "阿P低下头，扫了一眼手中发光的板砖，嘟囔着："
+    FandaP "对啊……导航显示就在这啊……"
+    "阿P抬头望向周围，在水泥地中穿梭。"
+    "阿P一会儿蹲下身，翻起随意堆砌的的砖头，一会儿跑到造了一半的大楼里，张开嘴，不知道在喊着什么。"
+    "我在远处看着阿P。太阳都挂到顶头了，阿P才垂着脑袋，拖着一双腿，又站到了我的面前。"
+    show FandaP uniform dissapoint normal with dissolve
+    FandaP "这小子……\n明明发的地位就是这里，现在却没了人影。"
+    I "有没有可能……"
+    I "你说那个人，压根就不住在这里……"
+    FandaP "不可能！我找路从来没错过！"
+    "？？？" "えっ？牢P你怎么在这？"
+    "我转过头，看见一个带着奇怪面罩的人走了过来。"
+    I "卧槽!"
+    "我一哆嗦，忍不住向后退了一步。"
+    "阿P眉头一蹙，指着他的鼻子，破口骂道："
+    FandaP "我靠，古神你tm死哪去了？"
+    zectbumokhfs "蛤？"
+    "古神一愣，指着自己，反问道："
+    zectbumokhfs "我又怎么了？"
+    FandaP "你说你早上在你家门口等我，你看看现在什么时候了！"
+    zectbumokhfs "蛤？"
+    "古神茫然地睁大了眼睛，看了看我，又看了看阿P，道："
+    zectbumokhfs "我家是住对面小区啊……"
+    FandaP "啊？"
+    "阿P缓缓转头看向了我，抿着嘴，打岔道："
+    FandaP "好了好了……既然人已经找到了，那我们就说事吧……"
+    I "啧。"
+    "我鄙夷地看了阿P一眼，但也没计较。"
+    "阿P清了清嗓子，走到对方身旁，拍了拍他的肩膀，介绍道："
+    FandaP "这位就是扎克得布莫柯赫佛斯（zectbumokhfs)，你可以叫他古神。"
+
