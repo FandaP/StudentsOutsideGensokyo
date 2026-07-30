@@ -73,7 +73,7 @@ label main0:
     "也是我和外面世界的朋友们之间发生的事情。"
     "故事还得从我三个月前来到外面世界说起。"
     with fade
-    "2026年5月10日，在一处让我非常陌生的地方。"
+    "2026年5月10日，在一处让我感到陌生的地方。"
     I "好痛……"
     I "我这是在哪……"
     scene bg outside street night
@@ -354,6 +354,7 @@ label main7a:
     show FandaP bathrobe laugh normal none with zoomout
     FandaP "这怎么可能呢，持有管制刀具可是违法的。。。"
     "阿P走出了浴室。"
+    jump main8
 
 
 label main7b:
@@ -376,14 +377,13 @@ label main7b:
     show FandaP bathrobe smile normal with dissolve
     with dissolve
     "听到这里，我毛骨悚然。我突然后悔来到这里了。"
-    pause 0.5
-    extend "\n但是一旁的阿P看见我的样子，不禁笑了起来。"
+    "但是一旁的阿P看见我的样子，不禁笑了起来。"
     FandaP "你呀，果然还是Too young！"
 
 label main8:
     "然后，阿P把我带到书桌前。"
     scene bg outside phome desk supportpaper
-    show FandaP uniform smile normal
+    show FandaP uniform serious normal
     with dissolve
     FandaP "你是幻想乡来的。"
     I "对，有什么问题吗？"
@@ -392,23 +392,28 @@ label main8:
 
     他创造了一个世界观，名为“东方”。
 
-    在这个世界观里，妖怪们为了维护自身的稳定，建立了幻想乡。"""
+    在这个世界观里，妖怪们为了维护自身的稳定，建立了幻想乡。
+
+    这个故事你知道吗？"""
     I "我知道啊，幻想乡的故事，我从小听到大的。"
     FandaP "这样啊……"
+    I "但是，那个什么，叫太田顺也的，我不认识。"
     show FandaP uniform thought normal lookinme with dissolve 
     "阿P手托着腮，一双眼睛盯着我。"
+    FandaP "就是这个叫作太田顺也的人，创造了这样一个名为幻想乡的世界。"
+    I "可是……我不觉得如此啊，幻想乡不是真实存在的吗？我就是生活在里面的。"
     FandaP "事情开始变的有趣起来了呢……"
     I "这个幻想乡对我而言是真实的，对你而言却是虚构的？"
     FandaP "是这样的呢……"
     show FandaP uniform thought normal eyesclose with dissolve
-    "我和阿P大眼瞪着小眼，空气一时间凝固了下来。"
+    "我和阿P面对面，空气一时间凝固了下来。"
     I "所以？"
     FandaP "……"
     show FandaP uniform thought normal lookinme with dissolve
     "阿P就这样继续盯着我。"
-    pause 0.5
-    extend "过了一会，阿P重新开口。"
-    FandaP "我带你去找两个人。"
+    pause 1
+    "过了一会，阿P重新开口。"
+    FandaP "我带你去找人。"
     I "休息一下吧，现在是晚上了嘛。"
     FandaP "额，那，就明天吧……"
     I "我们这是要去找谁啊？"
@@ -416,13 +421,11 @@ label main8:
 
 
 label main9:
-    scene bg outside 
-    show FandaP uniform smile normal
+    scene bg outside constructionsite day
+    show FandaP uniform serious normal
     with Fade(0.5,3,0.5)
     I "咳咳……"
-    "风刮在我的脸上，漫天的灰尘涌来。"
-    pause 0.5
-    extend "\n我感到肺一阵瘙痒。"
+    "风刮在我的脸上，漫天的灰尘涌来。\n我感到肺一阵瘙痒。"
     "我不禁把眼睛眯了起来。"
     I "呃……"
     "我指着这一片钢筋，抬起头望向阿P："
@@ -431,31 +434,72 @@ label main9:
     "阿P低下头，扫了一眼手中发光的板砖，嘟囔着："
     FandaP "对啊……导航显示就在这啊……"
     "阿P抬头望向周围，在水泥地中穿梭。"
-    "阿P一会儿蹲下身，翻起随意堆砌的的砖头，一会儿跑到造了一半的大楼里，张开嘴，不知道在喊着什么。"
-    "我在远处看着阿P。太阳都挂到顶头了，阿P才垂着脑袋，拖着一双腿，又站到了我的面前。"
+    show FandaP uniform none normal at leftbottom
+    with dissolve
+    "阿P一会儿蹲下身，翻起随意堆砌的的砖头。"
+    show FandaP uniform none normal at righttop
+    with dissolve
+    "一会儿跑到造了一半的大楼里，张开嘴，不知道在喊着什么。"
+    "我在远处看了阿P一上午。"
+    I "搞什么嘛……"
+    "到了中午，阿P才垂着脑袋，拖着一双腿，站到了我的面前。"
     show FandaP uniform dissapoint normal with dissolve
-    FandaP "这小子……\n明明发的地位就是这里，现在却没了人影。"
+    FandaP "这个古神啊……明明发的地位就是这里，现在连个影子都看不着……"
     I "有没有可能……"
-    I "你说那个人，压根就不住在这里……"
+    I "你说那个人，压根就不住在这里……？"
     FandaP "不可能！我找路从来没错过！"
+    "阿P正说着，一个声音传来。"
     "？？？" "えっ？牢P你怎么在这？"
     "我转过头，看见一个带着奇怪面罩的人走了过来。"
-    I "卧槽!"
+    hide FandaP with dissolve
+    show zectbumokhfs uniform laugh normal none withmusk with zoomin
+    I "啊？！"
     "我一哆嗦，忍不住向后退了一步。"
     "阿P眉头一蹙，指着他的鼻子，破口骂道："
     FandaP "我靠，古神你tm死哪去了？"
+    show zectbumokhfs uniform doubtful normal none withmusk at right
+    show FandaP uniform angry normal at left 
+    with dissolve
     zectbumokhfs "蛤？"
     "古神一愣，指着自己，反问道："
     zectbumokhfs "我又怎么了？"
-    FandaP "你说你早上在你家门口等我，你看看现在什么时候了！"
+    FandaP "你说你早上在你家门口等我，你看看现在，tm的什么时候了！"
     zectbumokhfs "蛤？"
-    "古神茫然地睁大了眼睛，看了看我，又看了看阿P，道："
+    show zectbumokhfs uniform shock normal with dissolve 
+    "古神茫然地睁大了眼睛，看了看我，又看了看阿P，指着不远处的一片建筑："
     zectbumokhfs "我家是住对面小区啊……"
-    FandaP "啊？"
-    "阿P缓缓转头看向了我，抿着嘴，打岔道："
+    FandaP "额……"
+    show FandaP uniform serious watchphone with dissolve
+    "阿P低头看了看手机。"
+    FandaP "你发的不是……"
+    "阿P顿住了，缓缓转头看向了我，抿着嘴，打岔道："
+    show FandaP uniform laugh normal awarked with dissolve
     FandaP "好了好了……既然人已经找到了，那我们就说事吧……"
     I "啧。"
-    "我鄙夷地看了阿P一眼，但也没计较。"
+    "我鄙夷地看了阿P一眼，但也没说什么。"
+    show FandaP uniform laugh normal at center with dissolve
     "阿P清了清嗓子，走到对方身旁，拍了拍他的肩膀，介绍道："
-    FandaP "这位就是扎克得布莫柯赫佛斯（zectbumokhfs)，你可以叫他古神。"
+    FandaP "这位就是扎克德布莫科赫佛斯（zectbumokhfs)，你可以叫他古神。"
+    show zectbumokhfs uniform laugh normal
+    zectbumokhfs "你好你好，幸会幸会。"
+    "古神满脸笑意，走到了我身边，与我握手。"
+    I "呃……你好。你就是阿P所谓的那个……\n扎克德布莫科赫佛斯？"
+    zectbumokhfs "没有人这么叫我的，大家一般叫我古神……"
+    I "哦哦，古神。"
+    "我突然又想起来来到这里之前，我遇到的那两个人。"
+    # 过去的场景，main5
+    scene bg gensokyo shirine 
+    show zectbumokhfs at right
+    show CirNo at left
+    with fade
+    CirNo "呃，你谁啊？"
+    zectbumokhfs "一个杂鱼，和大结界一起炸了就好了。"
+    scene bg outside constructionsite day
+    show FandaP uniform smile normal at left
+    show zectbumokhfs uniform laugh normal at right
+    with fade
+    I "你是，大结界旁扔核弹那个？"
+    zectbumokhfs "这么快就猜出来了，不错嘛。"
+
+
 
