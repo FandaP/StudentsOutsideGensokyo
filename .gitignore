@@ -31,5 +31,6 @@
 # Dialogue which have not been added into the code.
 /Shinden.txt
 
-# Git-bash runner file.
-/rungit.bat
+# Batch and shell file that is not important.
+/*.bat
+/*.sh
