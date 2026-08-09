@@ -209,7 +209,7 @@ label main4:
             # 阿P震惊
             show FandaP uniform shock normal with hpunch
             FandaP "你的名字是棍母？！"
-            jump main5
+            jump main4
         FandaP "[myName]，真是个奇怪的名字，不过细想也是个好名字。"
 
     FandaP "哦对了，我的名字叫FandaP。当然，他们都叫我阿P。\n你就叫我阿P就行了。"
@@ -434,17 +434,21 @@ label main9:
     "阿P低下头，扫了一眼手中发光的板砖，嘟囔着："
     FandaP "对啊……导航显示就在这啊……"
     "阿P抬头望向周围，在水泥地中穿梭。"
-    show FandaP uniform none normal at leftbottom
+    show FandaP uniform none normal:
+        xalign 0.0
+        yalign 1.0
     with dissolve
     "阿P一会儿蹲下身，翻起随意堆砌的的砖头。"
-    show FandaP uniform none normal at righttop
+    show FandaP uniform none normal:
+        xalign 1.0
+        yalign 0.5
     with dissolve
     "一会儿跑到造了一半的大楼里，张开嘴，不知道在喊着什么。"
     "我在远处看了阿P一上午。"
     I "搞什么嘛……"
     "到了中午，阿P才垂着脑袋，拖着一双腿，站到了我的面前。"
     show FandaP uniform dissapoint normal with dissolve
-    FandaP "这个古神啊……明明发的地位就是这里，现在连个影子都看不着……"
+    FandaP "明明发的定位就是这里，现在连个影子都看不着……"
     I "有没有可能……"
     I "你说那个人，压根就不住在这里……？"
     FandaP "不可能！我找路从来没错过！"
@@ -498,8 +502,58 @@ label main9:
     show FandaP uniform smile normal at left
     show zectbumokhfs uniform laugh normal at right
     with fade
-    I "你是，大结界旁扔核弹那个？"
+    "我不禁浑身发抖。愣了好一会儿，我才胆战心惊地问："
+    I "你……你是，大结界旁扔核弹那个？"
     zectbumokhfs "这么快就猜出来了，不错嘛。"
+    show FandaP uniform shock normal questionmark with dissolve
+    FandaP "哇哦，古神你到那边去一趟，还整上核弹了？"
+    zectbumokhfs "毕竟，我破坏力强嘛。核弹什么的都是没问题啦～"
+    FandaP "啧啧，阿空头像不是白换的啊。"
+    "看着这两个人说话，我居然有点插不上嘴。"
+    "但是这好像是因为，之前遇到的古神，差点没把我炸死。"
+    "看着他们有说有笑的样子，我过了好一会才上前问道："
+    I "我们……可以说正事了吗？"
+    "我向古神投去的目光里充满了恐惧，“被核弹炸飞”这种事已经在我心里留下了不小的阴影。"
+    zectbumokhfs "哦，也对。站在这里说话会被怀疑的，大概吧。虽然今天是休息日，但是在工地站着……很怪异。"
+    "正当我们要走的时候，阿P就像是想起了什么似的，停下了脚步。"
+    FandaP "琪露锘呢？今天不来吗？"
+    I "你说那个，雾之湖的笨蛋？这不是外界吗？"
+    "那个琪露诺，听说是个会到处冻青蛙的妖精，也算是幻想乡为数不多的在人类村落里都能以某一显著特征而闻名的妖精了。"
+    "——那个特征就是，很笨。"
+    FandaP "那个琪露诺吗……哇啊，笨笨的很可爱呢～"
+    "……阿P到底在想什么啊。"
+    zectbumokhfs "……喂"
+    "一脸无语的古神叫了一声，——不过无语的人当然不只有古神，——阿P才意识到现在该说什么。"
+    FandaP "啊，啊……哦，不是！我的意思是，琪露诺很笨，但也不是什么善茬，一定要推倒才行！"
+    "……阿P这样子不像是表演，反而像是真情流露了。"
+    zectbumokhfs "……我说P兄，这位刚刚在问你那个琪露锘。锕系的，原子序数102那个。"
+    FandaP "啊……哦，你说的不是雾之湖妖精啊……（失望）"
+    "阿P看起来……居然有点失落？"
+    FandaP "那位琪露锘的锘，可不是チルノ（chi ru no）的ノ（no）啊。"
+    "不过好在，他终于开始讲起正事了"
+    FandaP "这个琪露锘，也是我们的朋友啦。这位和雾之湖妖精可不一样。"
+    FandaP "但是也跟那个妖精比起来也聪明不到哪里去（小声）"
+    "我看你也不是什么很聪明的人啊，我心里这样想着。"
+    I "那我们说话的时候，岂不是很不方便吗？要是没有上下文，怎么知道这个琪露nuo是锘还是诺呢？"
+    FandaP "没事，那位朋友也可以叫锘锘。"
+    "真是肉麻。"
+    I "这个名字是……？"
+    FandaP "诶呀，是我现场起的名啦，你就叫锘锘好了。"
+    zectbumokhfs "真是草率啊……你也不问问琪露锘愿不愿意叫这个名字。"
+    "就是说嘛。"
+    FandaP "按理说，锘锘今天应该会来吧？"
+    "可是……阿P居然一点都没听到一样，继续用着锘锘这个不知所云的称谓。"
+    zectbumokhfs "哎呀，我忘记叫她来了。但是就我们三个也不是不能说事。来吧，到我家去一趟。"
+    FandaP "这都能忘……"
+    jump main10
 
-
-
+label main10:
+    scene bg outside zhome
+    show zectbumokhfs uniform smile normal at right
+    show FandaP uniform smile normal at left
+    with dissolve
+    zectbumokhfs "你们坐一会儿，我给你们整点喝的。"
+    hide zectbumokhfs with moveouttop
+    show FandaP uniform normal at center
+    I "……"
+    FandaP "……"
