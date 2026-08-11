@@ -285,7 +285,10 @@ label main5:
     scene black with dissolve
     
     I "。……？"
-    CirNo "怎么没炸开啊，古神你行不行啊？" # Another Views
+    # TODO (1) main5: 被炸飞后应当切换成 another view
+    # 这个Another view可能得等好久以后才能加上，也算是一个比较经典的功
+    # 能了。
+    CirNo "怎么没炸开啊，古神你行不行啊？"
     zectbumokhfs "卧槽这大结界怎么这么坚固，算了我去找点反物质去。"
     I "（意识逐渐模糊）你们。。怎么能炸大结界。。。"
     extend "\n饿啊！（彻底失去意识）"
@@ -418,7 +421,14 @@ label main8:
     FandaP "额，那，就明天吧……"
     I "我们这是要去找谁啊？"
     FandaP "去找……两个犯了事的家伙。"
-
+    # TODO (2) main8: 和阿P睡觉（真的只是睡觉而已）
+    # 介于咱们这是galgame，谈恋爱的环节还是要有的。反正是共通，就当是
+    # 为阿P线培养感情，galgame不都这样的嘛（前面铺垫，对话选线）。这里
+    # 的剧情是阿P在一番纠结后还是要让我睡地板（睡地板的环节太经典了）。
+    # 绝对禁止R-18内容出现，真想看这种就交给开源社区，自己搞这个是要吃
+    # 牢饭的。
+    jump main9
+    
 
 label main9:
     scene bg outside constructionsite day
@@ -536,24 +546,33 @@ label main9:
     "我看你也不是什么很聪明的人啊，我心里这样想着。"
     I "那我们说话的时候，岂不是很不方便吗？要是没有上下文，怎么知道这个琪露nuo是锘还是诺呢？"
     FandaP "没事，那位朋友也可以叫锘锘。"
-    "真是肉麻。"
+    "好奇怪的名字……该不会是阿P现场起的吧？"
     I "这个名字是……？"
-    FandaP "诶呀，是我现场起的名啦，你就叫锘锘好了。"
+    FandaP "诶呀，是我临时起意叫的啦，你就叫锘锘好了。"
+    "居然真的是这样吗？"
     zectbumokhfs "真是草率啊……你也不问问琪露锘愿不愿意叫这个名字。"
-    "就是说嘛。"
     FandaP "按理说，锘锘今天应该会来吧？"
-    "可是……阿P居然一点都没听到一样，继续用着锘锘这个不知所云的称谓。"
-    zectbumokhfs "哎呀，我忘记叫她来了。但是就我们三个也不是不能说事。来吧，到我家去一趟。"
-    FandaP "这都能忘……"
+    "可是……阿P像是一点都没听到一样，继续用着锘锘这个不知所云的称谓。"
+    zectbumokhfs "哎呀，我忘记叫来了。但是就我们三个也不是不能说事。来吧，到我家去一趟。"
+    FandaP "这都能忘……不过就这样吧，我们走。"
+    zectbumokhfs "走吧。"
     jump main10
 
 label main10:
     scene bg outside zhome
     show zectbumokhfs uniform smile normal at right
     show FandaP uniform smile normal at left
-    with dissolve
+    with fade
     zectbumokhfs "你们坐一会儿，我给你们整点喝的。"
     hide zectbumokhfs with moveouttop
     show FandaP uniform normal at center
     I "……"
     FandaP "……"
+    "我和阿P面面相觑，我们两个都不知道该说什么。"
+    "最后，还是我打破了这死一般的寂静。"
+
+    # TODO (3) main10: 来到古神家后与阿P的对话
+    # 这里和阿P 的对话先跳过，因为真的不知道咋写。到时候让chuge来帮忙
+    # 就好，总体就是推进昨晚的对话。整个过程是为了寻找神隐与反神隐的真
+    # 相。反正就是太多学生聚在一起尼莫指数太高导致的，就以此为线索往下
+    # 编吧。
