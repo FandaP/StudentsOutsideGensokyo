@@ -86,9 +86,9 @@ label main0:
     "音乐声越来越大。"
     # 黑影阿P从屏幕右边出现并移到中间
     show FandaP uniform none normal inshadow with moveinright
-    "一个年龄和我相仿的男孩向我走来，他的手中紧握着一个方形的盒子。"
+    "一个年龄和我相仿的黑影向我走来，黑影手中紧握着一个方形的盒子。"
     menu:
-        I "这里好像也没别人了，只能求助于他了……"
+        I "这里好像也没别人了，只能求助于她了……"
         "……你好？":
             jump main1a
         "……":
@@ -195,6 +195,8 @@ label main3:
 label main4:
     # 阿P闭眼笑
     show FandaP uniform laugh normal with dissolve
+    "开发者" "此处请谨慎输入名称，这个名字将成为接下来在所有剧情中使用的你的名字。"
+    "开发者" "再次提醒，务必三思而后行！"
     $ myName = renpy.input("我的名字叫").strip()
     if myName in THCharas:
         "我" "我的名字叫[myName]"
@@ -210,6 +212,28 @@ label main4:
             show FandaP uniform shock normal with hpunch
             FandaP "你的名字是棍母？！"
             jump main4
+
+        ## TODO LOW main4: 取消对保护性措施的注释
+        ## 为了防止玩家乱输名字，通过两次确认的方式确保玩家不会使用乱起
+        ## 名。
+        ## 但是由于开发阶段设置这个实在是给调试添麻烦，于是先给注释上。
+        
+        #"开发者" "你确定你要使用“[myName]”这个名字吗？\n这将成为接下来所有剧情中你的名字！"
+        #"如果确定使用，请输入“[myName]”以确认。"
+        #$ name_checked = renpy.input(f"输入“{myName}”以确认使用该名称，否则将返回重新起名。")
+        #if name_checked == myName:
+        #    pass
+        #else:
+        #    jump main4
+        #"如果确定使用，请输入“StudentsOutsideGensokyo”以确认。"
+        #"开发者" "你确定你要使用“[myName]”这个名字吗？\n这是最后一次反悔的机会！"
+        #$ name_checked = renpy.input(f"输入“StudentsOutsideGensokyo”以确认使用该名称，否则将返回重新起名。")
+        #if name_checked == "StudentOutsideGensokyo":
+        #    pass
+        #else:
+        #    jump main4
+        #del name_checked
+        
         FandaP "[myName]，真是个奇怪的名字，不过细想也是个好名字。"
 
     FandaP "哦对了，我的名字叫FandaP。当然，他们都叫我阿P。\n你就叫我阿P就行了。"
@@ -226,8 +250,8 @@ label main4:
             FandaP "你现在面临着十分复杂的情况，我必须给你讲解清楚。"
             I "那你在这儿讲不得了，上你家干嘛？"
             FandaP "你不嫌热吗？"
-            "诚然，这里热的不行。\n想了想，我还是跟着阿P走了"
-            FandaP "你快走吧，已经晚上十一点半了"
+            "诚然，这里热的不行。\n想了想，我还是跟着阿P走了。"
+            FandaP "你快走吧，已经晚上十一点半了。"
     hide FandaP
     "就这样，我们前往了阿P的家。"
     # scene 阿P家起居室
@@ -285,7 +309,7 @@ label main5:
     scene black with dissolve
     
     I "。……？"
-    # TODO (1) main5: 被炸飞后应当切换成 another view
+    # TODO LOW main5: 被炸飞后应当切换成 another view
     # 这个Another view可能得等好久以后才能加上，也算是一个比较经典的功
     # 能了。
     CirNo "怎么没炸开啊，古神你行不行啊？"
@@ -382,6 +406,7 @@ label main7b:
     "听到这里，我毛骨悚然。我突然后悔来到这里了。"
     "但是一旁的阿P看见我的样子，不禁笑了起来。"
     FandaP "你呀，果然还是Too young！"
+    jump main8
 
 label main8:
     "然后，阿P把我带到书桌前。"
@@ -421,7 +446,7 @@ label main8:
     FandaP "额，那，就明天吧……"
     I "我们这是要去找谁啊？"
     FandaP "去找……两个犯了事的家伙。"
-    # TODO (2) main8: 和阿P睡觉（真的只是睡觉而已）
+    # TODO HIGH main8: 和阿P睡觉（真的只是睡觉而已）
     # 介于咱们这是galgame，谈恋爱的环节还是要有的。反正是共通，就当是
     # 为阿P线培养感情，galgame不都这样的嘛（前面铺垫，对话选线）。这里
     # 的剧情是阿P在一番纠结后还是要让我睡地板（睡地板的环节太经典了）。
@@ -469,7 +494,7 @@ label main9:
     show zectbumokhfs uniform laugh normal none withmusk with zoomin
     I "啊？！"
     "我一哆嗦，忍不住向后退了一步。"
-    "阿P眉头一蹙，指着他的鼻子，破口骂道："
+    "阿P眉头一蹙，指着那人的鼻子，破口骂道："
     FandaP "我靠，古神你tm死哪去了？"
     show zectbumokhfs uniform doubtful normal none withmusk at right
     show FandaP uniform angry normal at left 
@@ -492,8 +517,8 @@ label main9:
     I "啧。"
     "我鄙夷地看了阿P一眼，但也没说什么。"
     show FandaP uniform laugh normal at center with dissolve
-    "阿P清了清嗓子，走到对方身旁，拍了拍他的肩膀，介绍道："
-    FandaP "这位就是扎克德布莫科赫佛斯（zectbumokhfs)，你可以叫他古神。"
+    "阿P清了清嗓子，走到对方身旁，拍了拍那人的肩膀，介绍道："
+    FandaP "这位就是扎克德布莫科赫佛斯（zectbumokhfs)，当然，也可以叫古神。"
     show zectbumokhfs uniform laugh normal
     zectbumokhfs "你好你好，幸会幸会。"
     "古神满脸笑意，走到了我身边，与我握手。"
@@ -518,6 +543,7 @@ label main9:
     show FandaP uniform shock normal questionmark with dissolve
     FandaP "哇哦，古神你到那边去一趟，还整上核弹了？"
     zectbumokhfs "毕竟，我破坏力强嘛。核弹什么的都是没问题啦～"
+    # TODO MEDIUM main9 阿P与古神对话中的角色标签
     FandaP "啧啧，阿空头像不是白换的啊。"
     "看着这两个人说话，我居然有点插不上嘴。"
     "但是这好像是因为，之前遇到的古神，差点没把我炸死。"
@@ -571,8 +597,101 @@ label main10:
     "我和阿P面面相觑，我们两个都不知道该说什么。"
     "最后，还是我打破了这死一般的寂静。"
 
-    # TODO (3) main10: 来到古神家后与阿P的对话
+    # TODO HIGH main10: 来到古神家后与阿P的对话
     # 这里和阿P 的对话先跳过，因为真的不知道咋写。到时候让chuge来帮忙
     # 就好，总体就是推进昨晚的对话。整个过程是为了寻找神隐与反神隐的真
     # 相。反正就是太多学生聚在一起尼莫指数太高导致的，就以此为线索往下
     # 编吧。
+
+    "就在这时候，一脸坏笑的古神回到了桌子旁边。"
+    zectbumokhfs "嘿呀，我回来了。"
+    zectbumokhfs "饮料的话，我可给你们挑了好久呢～"
+    zectbumokhfs "既要平衡阿P你的喜好，又要给这位尝尝外界的口味，可真不容易呢。"
+    FandaP "废话真多啊……不过你到底挑的什么？"
+    zectbumokhfs "那！当！然！是！"
+    "古神情绪非常激动，从背后掏出两个白色的罐子。"
+    zectbumokhfs "M◯◯◯◯r E◯◯◯◯y！"
+    pause 1
+    "阿P先是一愣，然后表情扭曲在一起。此情此景，令我感到十分怪异。"
+    I "这是什么？"
+    FandaP "……"
+    FandaP "亏你能想得出来啊，拿魔◯待客吗？"
+    "阿P的脸上充满了不屑，随后又转头看向我。"
+    FandaP "哎，[myName]，他给的东西你千万别喝。"
+    zectbumokhfs "干什么啊，我挑了好久的好东西……"
+    "突然，阿P的电话响了。"
+    FandaP "（拿出手机，接起电话）"
+    FandaP "喂？啊？"
+    I "（古神，他在干嘛啊？）"
+    FandaP "哦，对，就是在成◯这里。"
+    zectbumokhfs "（这是在打电话，河童还没研究出来这种东西吗？）"
+    I "（电话？……我想起来了，不就是那个两个纸杯一根线的东西吗？）"
+    zectbumokhfs "（……）"
+    FandaP "什么？这么快？啊，行吧。这里的确挺复杂的。我现在下来接你。"
+    "阿P放下手机，骄傲地抬起头，看着我和古神。"
+    FandaP "嘿嘿……我跟你们说，锘锘来了哦。"
+    I "不是说不来吗？怎么回事？"
+    FandaP "我给他叫过来的，刚刚在楼下工地那会儿。"
+    zectbumokhfs "这么快？她家不是在杭◯吗？几百公里的路二十分钟就到了？"
+    FandaP "那是因为，我发动能力了哦～"
+    zectbumokhfs "啊？呃……"
+    zectbumokhfs "那你这能力挺超标啊，不过也算是用对时候了。"
+    zectbumokhfs "你去找她吧，我陪这个……"
+    "在目光朝我转过来的时候，古神突然愣住了，然后拍了下大腿。"
+    zectbumokhfs "对哦，你叫什么来着？"
+    FandaP "[myName]。"
+    "阿P头也不回的把我的名字甩给了古神。"
+    FandaP "我走了。"
+    "看到阿P的背影，古神开玩笑一般地叫了一句："
+    zectbumokhfs "你可别和琪露锘一起迷路了啊！"
+    "阿P突然折返回来，紧握着拳，似乎想要朝古神打去。"
+    FandaP "我说古神你真该死啊……"
+    "古神连忙闪身，想要躲开。但阿P并没有把拳头砸上来，反而是拿上了古神先前拿来的白色罐子。"
+    FandaP "我现在没时间和你说了，因为还是找锘锘要紧。"
+    "阿P这回把门关上了。楼道里传来了脚步声和易拉罐拉开的声音。"
+    
+    "没过一会，脚步声消失了。房间里就剩下了我和古神两个人。"
+    zectbumokhfs "阿P去找琪露锘了……这一去恐怕得花半小时……"
+    "古神自己说这话的时候都没想到，等这两个人汇合，又重新找到古神的家时，两个小时都过去了。"
+    zectbumokhfs "不过，居然把我的魔◯拿走了……"
+    zectbumokhfs "嘴上说着不喝，身体还是很诚实的嘛。"
+    "说到这里，古神露出了诡异的坏笑。"
+    I "这话怎么听着那么怪呢……"
+    zectbumokhfs "哦对了，[myName]，你要来点吗？这个M◯◯◯◯r E◯◯◯◯y～"
+    "古神把罐子里的白色液体倒到了玻璃杯里，伸手把玻璃杯递给了我。"
+    I "呃，这颜色怎么那么像……"
+    "还没等我说完，古神往我的头上敲了一下。"
+    zectbumokhfs "想什么呢！这就是能量饮料而已啦！"
+    zectbumokhfs "来嘛，喝一口嘛，[myName]君～"
+    "我看了看古神这盛情难却的样子，又看了看眼前的白色饮料，还是决定……"
+    menu:
+        "本次的抉择会影响剧情走向。"
+        "尝一口试试？":
+            jump main11a
+        "阿P让我别喝这个东西":
+            jump main11b
+
+label main11a:
+    I "阿P自己都拿走一罐了，那我喝一口应该也没问题吧。"
+    "看着古神递来的那诱人的冒着气泡的白色饮料，我还是接过了这杯所谓的魔◯。"
+    "但是，里面荡漾着的白色液体，真的不禁让我感受到了强烈的恶心。"
+    "就在我准备放下杯子时……"
+    zectbumokhfs "拿了我的饮料还想放下？"
+    "古神突然把手往前一伸，把杯子的底部一抬，让杯口正好对准了我的嘴。"
+    I "诶……唔！"
+    "于是，巨量的魔◯就这么被古神灌进了我的嘴里。"
+    I "唔……嗯……"
+    "直到杯中一空，古神才把杯子夺了回去。"
+    I "感觉……还挺好喝？"
+    "这个魔◯的味道，是我从来没有尝过本来也永远尝不到的，没想到居然如此的惊艳。"
+    "舌尖那酸甜的口感，加上气泡的刺激，恐怕令我一辈子也忘不掉了。"
+    zectbumokhfs "诶呀，不错嘛。第一次喝这种饮料还以为你会有什么剧烈反应呢。"
+    "不过，没过一会儿，我就开始难受了。"
+    I "这啥啊，怎么后劲这么大……"
+    zectbumokhfs "习惯就好啦～"
+    "我还在难受着，喉咙里那说不出来的感觉甚至让我躺在了地上。"
+    
+    
+label main11b:
+    pass
+    
