@@ -12,6 +12,10 @@ define CirNo = Character(name="琪露锘",color="#68f")
 define Shinden = Character(name="Shinden")
 define chuge = Character(name="chuge",color="#fff")
 define zectbumokhfs = Character(name="zectbumokhfs",color="#383")
+define z = Character(name="zectbumokhfs",color="#383",kind=nvl)
+
+define n = nvl_narrator
+
 define Mom = Character(name="妈妈",image="myMom")
 default THCharas = [
     "博丽灵梦", "雾雨魔理沙", "神玉", "魅魔", "菊理", "矜羯罗", 
@@ -602,8 +606,10 @@ label main10:
     # 就好，总体就是推进昨晚的对话。整个过程是为了寻找神隐与反神隐的真
     # 相。反正就是太多学生聚在一起尼莫指数太高导致的，就以此为线索往下
     # 编吧。
+    "这里的剧情我实在想不出来，就空着了（"
 
     "就在这时候，一脸坏笑的古神回到了桌子旁边。"
+    show zectbumokhfs uniform smile normal at right
     zectbumokhfs "嘿呀，我回来了。"
     zectbumokhfs "饮料的话，我可给你们挑了好久呢～"
     zectbumokhfs "既要平衡阿P你的喜好，又要给这位尝尝外界的口味，可真不容易呢。"
@@ -664,11 +670,13 @@ label main10:
     zectbumokhfs "想什么呢！这就是能量饮料而已啦！"
     zectbumokhfs "来嘛，喝一口嘛，[myName]君～"
     "我看了看古神这盛情难却的样子，又看了看眼前的白色饮料，还是决定……"
-    menu:
+    menu ME:
         "本次的抉择会影响剧情走向。"
         "尝一口试试？":
             jump main11a
         "阿P让我别喝这个东西":
+            "还没写到这里哦，请选择另一个选项"
+            jump ME
             jump main11b
 
 label main11a:
@@ -686,12 +694,97 @@ label main11a:
     "这个魔◯的味道，是我从来没有尝过本来也永远尝不到的，没想到居然如此的惊艳。"
     "舌尖那酸甜的口感，加上气泡的刺激，恐怕令我一辈子也忘不掉了。"
     zectbumokhfs "诶呀，不错嘛。第一次喝这种饮料还以为你会有什么剧烈反应呢。"
-    "不过，没过一会儿，我就开始难受了。"
+    I "居然真的挺好喝的……"
+    I "但是……怎么感觉不太对劲呢……啊！"
+    "没多久，我的喉咙像是被撕裂了一般，连面色都变得铁青。"
     I "这啥啊，怎么后劲这么大……"
     zectbumokhfs "习惯就好啦～"
-    "我还在难受着，喉咙里那说不出来的感觉甚至让我躺在了地上。"
+    "我如同窒息一般，躺倒在沙发上左右翻滚。"
+    zectbumokhfs "（惊讶）"
+    zectbumokhfs "不对啊，再怎么说，也不会出现这么剧烈的症状吧……"
+    "古神说着拍了拍我的肩膀。他观察着我的样子，突然面色煞白。"
+    zectbumokhfs "你这反应，有点剧烈了……嗯？啊！"
+    "古神一声惊呼，直接从沙发上跳了起来，奔向了厨房。"
+    "与此同时，我的意识也开始渐渐模糊。"
+    zectbumokhfs "[myName]，你撑住，我马上给你整好！"
+    "我不知道古神在干什么，但我的确是撑不住了。"
+    "我陷入了昏迷。"
+    window hide
+    scene black with dissolve
+    pause 1
+    window show
+    "于此同时，古神那边。"
     
+    scene bg outside zhome kitchen
+    show zectbumokhfs uniform serious normal
+    with dissolve
+    # TODO LOW Another View
+
+    window show
+    n "古神在厨房里，找急忙慌地架起锅，烧起水。"
+    z "怎么会反应这么剧烈啊！！这可怎么整啊！！"
+    z "对对，中医，中医！我看看还有什么药材！"
+    nvl clear
+    n "言毕，古神在柜子里翻起来。"
+    z "啊哈！果然还有！"
+    n "古神照着一本医学参考书，开始调起药材的剂量。"
+    z "我看看……只要把这些一起丢进去小火煎……三个小时？？？"
+    z "他妈的，等那个时候人都凉了！"
+    z "我想想……"
+    nvl clear
+    n "古神十分着急，在厨房里来回渡步。"
+    n "突然，古神像是想到了什么一样，连忙跑到灶台边上。"
+    z "那我用六倍的活力，岂不是只用半个小时了！"
+    n "古神把药材一股脑全丢进了锅里，直接打开了最大火。"
+    z "这个温度好像不够……有了！"
+    n "古神又往锅里丢了一根加热棒，然后把加热棒通上了电。"
+    n "然后，古神带着一碗开水直接离开了厨房。"
+    window hide
     
+    scene bg outside zhome
+    show zectbumokhfs uniform smile normal
+    with dissolve
+    pause 1
+    zectbumokhfs "来，[myName]不急，咱喝点热水～"
+    "古神一边说着，一边把滚烫的开水往我嘴里倒。"
+    "幸好昏迷状态下的我没有感觉，否则我可能就要痛死了。"
+    "我的喉咙自动把那滚烫的开水咽了下去。"
+    zectbumokhfs "咋还不醒啊……儒林通史里不都是这样的吗……"
+    zectbumokhfs "算了，我回去看看我药熬的怎么样了。"
+
+    scene bg outside zhome kitchen
+    show zectbumokhfs uniform serious normal
+    with dissolve
+    pause 1
+    show zectbumokhfs uniform happy normal
+    n "古神回到厨房，掀开了锅盖。"
+    n "一股怪异的味道传了出来，不知道是中药还是毒药。"
+    z "哎呀，我的方法果然有效！药这么快就煎好了！"
+    z "那就盛出来一碗，给[myName]吧！"
+    nvl clear
+    scene bg outside zhome 
+    show zectbumokhfs uniform
+    zectbumokhfs "哼哼哼哼哼～"
+    "古神哼着歌，端着一碗棕色的……液体，来到了我的面前。"
+    zectbumokhfs "来啦，喝药了～"
+    "古神扒开我的嘴，把这碗药倒了进去"
+    "也恰好是此时，我有点知觉了。"
+    I "嗯？……"
+    zectbumokhfs "你醒了？"
+    I "这是什么……？"
+    "然后，喉咙里剧痛的感觉瞬间就通过神经传到了我的脑中。"
+    I "嗯……啊！"
+    zectbumokhfs "？！"
+    I "卧槽这是啥卧槽怎么这么痛啊卧槽卧槽卧槽你他妈搞了什么我操你妈你干啥啊卧槽\
+       烫死我了烫死我了烫死我了烫死我了烫死我了烫死我了烫死我了烫死我了烫死我了\
+       烫死我了"
+    "我又昏迷了过去。"
+    zectbumokhfs "……"
+    zectbumokhfs "哎呀，这可怎么整啊！！"
+    "我把阿P带来的人给整死了，那这么大一块肉咋办啊？！！"
+
+    
+
 label main11b:
     pass
     
